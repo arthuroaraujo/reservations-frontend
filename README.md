@@ -34,7 +34,7 @@ O aplicativo estará disponível em [http://localhost:4200/](http://localhost:42
 
 ## Capturas de Tela
 
-Aqui estão algumas capturas de tela da nossa aplicação de reservas de hotel:
+Aqui estão algumas capturas de tela da nossa aplicação de reservas:
 
 ### Tela de Listagem de Reservas
 
