@@ -159,6 +159,7 @@ As tratativas de erros foram implementadas no Back End para melhorar a robustez 
 - Ao atualizar uma reserva:
   - "Data indisponível para atualização."
   - "Não é possível atualizar uma reserva cancelada."
+  - "Não é possível mudar o status para CANCELADA através desta operação."
 
 Além disso, foram definidas as seguintes regras para garantir a integridade dos dados:
 - A data de início da viagem não pode ser posterior à data de fim da viagem.
