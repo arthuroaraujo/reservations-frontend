@@ -1,0 +1,174 @@
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  margin-right: 10px;
+}
+
+.filter-button:last-child {
+  margin-right: 0;
+}
+
+
+.nova-reserva {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.ml-1 {
+  margin-left: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.invalid-feedback {
+  display: none;
+  color: #dc3545;
+  margin-top: 5px;
+}
+
+.is-invalid {
+  border-color: #dc3545;
+}
+
+.is-invalid~.invalid-feedback {
+  display: block;
+}
+
+.add-reservation {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.add-reservation .card-header {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.add-reservation .form-group {
+  margin-bottom: 20px;
+}
+
+.add-reservation label {
+  font-weight: bold;
+}
+
+.add-reservation input[type="text"],
+.add-reservation input[type="date"],
+.add-reservation input[type="number"],
+.add-reservation select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.add-reservation .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.add-reservation .btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+.add-reservation .is-invalid {
+  border-color: #dc3545;
+}
+
+.add-reservation .is-invalid~.invalid-feedback {
+  display: block;
+  color: #dc3545;
+  margin-top: 5px;
+}
+
+.add-reservation .invalid-feedback {
+  display: none;
+}
+
+.search-section {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.search-section .btn-primary{
+  margin-bottom: 5px;
+  margin-top: 5px;
+}

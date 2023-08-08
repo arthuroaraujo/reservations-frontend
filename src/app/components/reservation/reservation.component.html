@@ -1,0 +1,91 @@
+<div class="container">
+    <div class="filter-buttons">
+        <button mat-stroked-button color="primary" (click)="onFilterChange('all')">Todas</button>
+        <button mat-stroked-button color="primary" (click)="onFilterChange('confirmed')">Confirmadas</button>
+        <button mat-stroked-button color="primary" (click)="onFilterChange('pending')">Pendentes</button>
+        <button mat-stroked-button color="primary" (click)="onFilterChange('cancelled')">Canceladas</button>
+    </div>
+    <div class="search-section">
+        <label for="searchId">Buscar por ID:</label>
+        <input type="number" id="searchId" name="searchId" [(ngModel)]="searchId" class="form-control">
+        <button class="btn btn-primary" (click)="findById()">Buscar</button>
+        <button class="btn btn-secondary" (click)="resetSearch()">Limpar</button>
+    </div>
+    <div class="card-container">
+        <div class="card list-reservation">
+            <h5 class="card-header">Reservas</h5>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nome do Hóspede</th>
+                            <th scope="col">Data de Início</th>
+                            <th scope="col">Data de Fim</th>
+                            <th scope="col">Quantidade de Pessoas</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of list">
+                            <td>{{ item.id }}</td>
+                            <td>{{ item.nomeHospede }}</td>
+                            <td>{{ item.dataInicio | date }}</td>
+                            <td>{{ item.dataFim | date }}</td>
+                            <td>{{ item.quantidadePessoas }}</td>
+                            <td>{{ item.status }}</td>
+                            <td>
+                              <button type="button" class="btn btn-primary btn-sm" (click)="edit(item.id)">Editar</button>
+                              <button type="button" class="btn btn-danger btn-sm ml-1" (click)="cancel(item.id)">Cancelar</button>
+                              </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card add-reservation">
+            <h5 class="card-header">Adicionar Reserva</h5>
+            <div class="card-body">
+                <form id="add-form" (ngSubmit)="f.form.valid && createOrUpdate()" #f="ngForm" novalidate>
+                <div class="form-group">
+                  <label for="nomeHospede">Nome do Hóspede</label>
+                  <input type="text" [(ngModel)]="newReservation.nomeHospede" id="nomeHospede" name="nomeHospede"
+                    #nomeHospede="ngModel" required class="form-control"
+                    [ngClass]="{ 'is-invalid': f.submitted && nomeHospede.invalid }"
+                    placeholder="Digite o nome do hóspede">
+                </div>
+                <div class="form-group">
+                  <label for="dataInicio">Data de Início</label>
+                  <input type="date" [(ngModel)]="newReservation.dataInicio" id="dataInicio" name="dataInicio"
+                    #dataInicio="ngModel" required class="form-control"
+                    [ngClass]="{ 'is-invalid': f.submitted && dataInicio.invalid }">
+                </div>
+                <div class="form-group">
+                  <label for="dataFim">Data de Fim</label>
+                  <input type="date" [(ngModel)]="newReservation.dataFim" id="dataFim" name="dataFim"
+                    #dataFim="ngModel" required class="form-control"
+                    [ngClass]="{ 'is-invalid': f.submitted && dataFim.invalid }">
+                </div>
+                <div class="form-group">
+                  <label for="quantidadePessoas">Quantidade de Pessoas</label>
+                  <input type="number" [(ngModel)]="newReservation.quantidadePessoas" id="quantidadePessoas"
+                    name="quantidadePessoas" #quantidadePessoas="ngModel" required class="form-control"
+                    [ngClass]="{ 'is-invalid': f.submitted && quantidadePessoas.invalid }"
+                    placeholder="Digite a quantidade de pessoas">
+                </div>
+                <div class="form-group" *ngIf="!selectedReservation">
+                  <label for="status">Status</label>
+                  <select [(ngModel)]="newReservation.status" id="status" name="status" required class="form-control">
+                    <option value="CONFIRMADA">Confirmada</option>
+                    <option value="CONFIRMADA">Pendente</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-primary">{{ editingId ? 'Atualizar' : 'Adicionar' }}</button>
+                <button type="button" class="btn btn-secondary ml-2" (click)="cancelEdit()">Cancelar</button>
+              </form>
+            </div>
+          </div>          
+    </div>
+</div>
