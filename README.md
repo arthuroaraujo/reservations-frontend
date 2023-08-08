@@ -32,6 +32,22 @@ npm start
 
 O aplicativo estará disponível em [http://localhost:4200/](http://localhost:4200/)
 
+## Capturas de Tela
+
+Aqui estão algumas capturas de tela da nossa aplicação de reservas de hotel:
+
+### Tela de Listagem de Reservas
+
+![Tela de Listagem de Reservas](https://i.imgur.com/DSMt2pt.png)
+
+Nesta tela, os usuários podem visualizar todas as reservas existentes e aplicar filtros para ver as reservas confirmadas, pendentes ou canceladas. Assim como buscar uma reserva pelo seu id.
+
+### Tela de Criação de Reserva
+
+![Tela de Criação/Edição de Reserva](https://i.imgur.com/HRuyhFw.png)
+
+Nesta tela, os usuários podem criar uma reserva, adicionando informações como nome do hóspede, datas de início e fim da viagem, quantidade de pessoas, e status da reserva.
+
 ## Funcionalidades
 
 ### Listagem de Reservas
@@ -128,8 +144,6 @@ O aplicativo estará disponível em [http://localhost:4200/](http://localhost:42
     });
   }
   ```
-
-Claro, aqui está a seção "Dificuldades/Próximos Passos" ajustada para o formato de um README:
 
 ## Dificuldades/Próximos Passos
 
