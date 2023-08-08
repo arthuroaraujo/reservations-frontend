@@ -13,7 +13,7 @@ Este projeto é a interface de usuário construída com Angular para interagir c
 2. Navegue até o diretório do projeto:
 
    ```bash
-   cd reservas-frontend
+   cd reservations-frontend
    ```
 
 3. Instale as dependências:
